@@ -1,0 +1,29 @@
+{
+  "name": "nqm-app-property-inspector",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "babel-plugin-transform-class-properties": "^6.16.0",
+    "material-ui": "^0.15.4",
+    "meteor-node-stubs": "~0.2.0",
+    "nqm-api-tdx": "^0.1.19",
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1",
+    "react-komposer": "^1.13.1",
+    "react-mounter": "^1.2.0",
+    "react-tap-event-plugin": "^1.0.0",
+    "reactable": "^0.14.0"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "ivanglautier@gmail.com",
+  "license": "ISC",
+  "description": "",
+  "babel": {
+    "plugins": [
+      "transform-class-properties"
+    ]
+  }
+}
