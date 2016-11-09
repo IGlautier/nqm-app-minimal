@@ -5,6 +5,8 @@ import connectionManager from "../connection-manager";
 // options - options to tweak the returned data, e.g. { sort: { timestamp: -1 }, limit: 10, fields: {temperature: 1}} will sort by timestamp descending, limit the result to 10 items, and only return the temperature field in each document.
 function loadResourceData({resourceId, filter, options}, onData) {
   
+  console.log("loadResourceData: %s, filter: %s, options: %s", resourceId, JSON.stringify(filter || "{}"), JSON.stringify(options || "{}"));
+
   // Subscribe to the datasetData publication using the given filter and options.
   // The subscription will automatically re-run if any of the parameters change (i.e. resourceId, filter or options).
   const sub = connectionManager.subscribe("datasetData",resourceId, filter, options, {
@@ -25,5 +27,8 @@ function loadResourceData({resourceId, filter, options}, onData) {
   }
 }
 
-export default loadResourceData;
+export default {
+  loader: loadResourceData,
+  propsToWatch: ["resourceId", "filter", "options" ]
+};
 
