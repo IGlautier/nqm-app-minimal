@@ -1,4 +1,4 @@
-import {composeWithTracker} from "react-komposer";
+import composeWithTracker from "../composers/compose-with-tracker";
 import checkAuthenticated from "../composers/authenticated";
 import Layout from "../components/layout";
 

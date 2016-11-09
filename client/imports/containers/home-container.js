@@ -1,4 +1,4 @@
-import {composeWithTracker} from "react-komposer";
+import composeWithTracker from "../composers/compose-with-tracker";
 import loadData from "../composers/load-resource-data"; 
 import Home from "../components/home";
 

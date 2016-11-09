@@ -21,4 +21,7 @@ function loadResource({filter, options}, onData) {
   }    
 }
 
-export default loadResource;
+export default {
+  loader: loadResource,
+  propsToWatch: ["filter","options"]
+};
